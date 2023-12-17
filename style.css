@@ -1,0 +1,86 @@
+body {
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    font-family: 'Work Sans', sans-serif;
+
+}
+  
+#charts_container {
+    display: flex;
+    justify-content: center; /* Centers the charts horizontally */
+    align-items: flex-start; /* Aligns the charts at the top */
+    gap: 20px; /* Adds some space between the chart containers */
+}
+
+.chart-container {
+    display: flex;
+    flex-direction: column; /* Stacks the title and chart vertically */
+    align-items: center; /* Centers the title and chart horizontally */
+    flex: 1; /* This ensures that each chart container takes up equal space */
+    background-color: white; /* Sets the background color of the chart container to white */
+    padding: 10px; /* Optional: adds some space inside the container */
+}
+
+.chart-title {
+    text-align: center; /* Centers the title text */
+    margin-bottom: 10px; /* Adds some space between the title and the chart */
+    font-size: 1.5em; /* Adjust the font size as needed */
+    font-weight: bold; /* Makes the title bold */
+    width: 100%; /* Ensures the title is as wide as the container */
+    font-family: 'Work Sans', sans-serif;
+    /* Add any other styling you desire for your titles */
+}
+
+.observablehq-chart, .observablehq-chart_2 {
+    width: 100%; /* Ensure charts fill the container */
+    /* Add additional styles here if necessary */
+}
+
+.observablehq-input_year,
+.observablehq-input_country {
+    display: none; /* Hides the viewof elements */
+}
+
+.observablehq-chart_3 {
+    display: flex; /* Use flexbox to center content */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically, if needed */
+    margin: auto; /* Center the div itself */
+    width: 100%; /* Set a specific width, or 100% to take full container width */
+    /* Add any additional styles here */
+}
+
+.map-cite {
+    font-size: 0.8em; /* Adjust the font size as needed */
+    font-style: italic; /* Makes the text italic */
+    font-family: 'Work Sans', sans-serif;
+    /* Add any other styling you desire for your citations */
+}
+
+.demo-cite {
+    text-align: center; /* Centers the text */
+    font-size: 0.8em; /* Adjust the font size as needed */
+    font-style: italic; /* Makes the text italic */
+    font-family: 'Work Sans', sans-serif;
+    /* Add any other styling you desire for your citations */
+}
+
+.intro-text {
+    text-align: center; /* Center the introduction text */
+    padding: 20px; /* Add some padding around the text */
+    margin-bottom: 20px; /* Extra space below the intro before the rest of the content */
+    /* Additional styling can be added as needed */
+}
+
+.intro-text h1 {
+    font-size: 2em; /* Large font size for the main title */
+    margin-bottom: 0.5em; /* Space between the title and the following paragraph */
+}
+
+.intro-text p {
+    font-size: 1em; /* Standard font size for the text */
+    line-height: 1.5; /* Space between lines for readability */
+    max-width: 80%; /* Max width to prevent lines from being too long on large screens */
+    margin-left: auto; /* Center the paragraph block */
+    margin-right: auto; /* Center the paragraph block */
+}

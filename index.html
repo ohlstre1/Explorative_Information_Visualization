@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Immigration and Demographics</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="intro-text">
+        <h1>Welcome to the Global Immigration and Demographics Dashboard</h1>
+        <p>
+            Explore comprehensive data visualizations on immigration patterns and demographic 
+            trends across the world. Our interactive maps and charts offer insights into 
+            arrival and departure statistics, allowing users to discern migration flows 
+            for the year and country of choice. Delve into the demographic distributions 
+            of selected countries, examining age brackets over time to understand the 
+            changing faces of populations globally. Utilize the controls to select specific 
+            years and countries for a customized view.
+        </p>
+        <p>
+            Begin your journey by choosing a year and a country from the dropdown menus 
+            above, and watch the maps and charts update to reflect the movements and 
+            demographic shifts that shape our world.
+        </p>
+    </div>
+    
+
+    <div id="observablehq-89115dbe">
+        <div id="ineract_container">
+            <div class="observablehq-viewof-input_year"></div>
+            <div class="observablehq-input_year"></div>
+            <div class="observablehq-viewof-input_country"></div>
+            <div class="observablehq-input_country"></div>
+        </div>
+        <div id="charts_container">
+            <div class="chart-container">
+                <div class="chart-title" id="chart-title-1">Immigration (Arrival)</div>
+                <div class="observablehq-chart"></div>
+            </div>
+
+            <div class="chart-container">
+                <div class="chart-title" id="chart-title-2">Immigration (Departure)</div>
+                <div class="observablehq-chart_2"></div>
+            </div>
+        </div>
+        
+        <div class="map-cite"> 
+            <a>*Data source:</a>
+            <a href="https://www.un.org/development/desa/pd/content/international-migrant-stock" id="my-link">https://www.un.org/development/desa/pd/content/international-migrant-stock</a>
+        </div>
+        <div class="map-cite">
+            **Data is not available if the map shows the color black.
+        </div> 
+
+        <div class="chart-title" id="chart-title-1">Demographics over time in the selected country</div>
+        <div class="observablehq-chart_3"></div>
+        <div class="demo-cite"> 
+            <a>*Data source:</a>
+            <a href="https://ourworldindata.org/age-structure " id="my-link">"https://ourworldindata.org/</a>
+        </div>
+
+    </div>
+      <script type="module">
+        import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
+        import define from "https://api.observablehq.com/@edvard-ws/eiv.js?v=3";
+        (new Runtime).module(define, name => {
+          if (name === "viewof input_year") return Inspector.into("#observablehq-89115dbe .observablehq-viewof-input_year")();
+          if (name === "input_year") return Inspector.into("#observablehq-89115dbe .observablehq-input_year")();
+          if (name === "viewof input_country") return Inspector.into("#observablehq-89115dbe .observablehq-viewof-input_country")();
+          if (name === "input_country") return Inspector.into("#observablehq-89115dbe .observablehq-input_country")();
+          if (name === "chart") return Inspector.into("#observablehq-89115dbe .observablehq-chart")();
+          if (name === "chart_2") return Inspector.into("#observablehq-89115dbe .observablehq-chart_2")();
+          if (name === "chart_3") return Inspector.into("#observablehq-89115dbe .observablehq-chart_3")();
+        });
+      </script>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
